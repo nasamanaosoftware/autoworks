@@ -14,8 +14,6 @@ const todoReducer = (state = INITIAL_STATE, action) => {
 };
 
 const handleRemoveTodo = (item, todos) => {
-  const todoIndex = todos.indexOf(item);
-  todos.splice(todoIndex, 1);
-  return {todos: todos};
+  return {todos: todos.filter((e, i) => e != item)}
 };
 export default todoReducer;
